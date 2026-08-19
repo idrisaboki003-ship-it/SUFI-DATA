@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUFI DATA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #222;
+    }
+
+    header {
+      background: #0b8f4d;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 25px auto;
+      padding: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: #0b8f4d;
+      margin-top: 0;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: #0b8f4d;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #08733d;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SUFI DATA</h1>
+  <p>Affordable Data • Fast Delivery • Reliable Service</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Buy Data</h2>
+
+    <label>Phone Number</label>
+    <input type="tel" id="phone" placeholder="Enter phone number">
+
+    <label>Network</label>
+    <select id="network">
+      <option value="">Select Network</option>
+      <option value="MTN">MTN</option>
+      <option value="Airtel">Airtel</option>
+      <option value="Glo">Glo</option>
+      <option value="9mobile">9mobile</option>
+    </select>
+
+    <label>Data Plan</label>
+    <select id="plan">
+      <option value="">Select Data Plan</option>
+      <option value="1GB">1GB - ₦400</option>
+      <option value="2GB">2GB - ₦700</option>
+      <option value="3GB">3GB - ₦1,000</option>
+      <option value="5GB">5GB - ₦1,500</option>
+    </select>
+
+    <button onclick="buyData()">Buy Data</button>
+  </div>
+
+  <div class="card contact">
+    <h2>Need Help?</h2>
+    <p>Call or WhatsApp us:</p>
+    <p><strong>08165825400</strong></p>
+
+    <button class="whatsapp" onclick="openWhatsApp()">
+      Chat on WhatsApp
+    </button>
+  </div>
+
+</div>
+
+<script>
+function buyData() {
+  const phone = document.getElementById("phone").value;
+  const network = document.getElementById("network").value;
+  const plan = document.getElementById("plan").value;
+
+  if (!phone || !network || !plan) {
+    alert("Please fill in all the details.");
+    return;
+  }
+
+  alert(
+    "Order received!\\n\\n" +
+    "Network: " + network + "\\n" +
+    "Phone: " + phone + "\\n" +
+    "Plan: " + plan
+  );
+}
+
+function openWhatsApp() {
+  window.open("https://wa.me/2348165825400", "_blank");
+}
+</script>
+
+</body>
+</html>
